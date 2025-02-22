@@ -150,15 +150,15 @@ namespace WindowsFormsApp_Hausarbeit
 
             Console.WriteLine("Starte genetischen Algorithmus");
 
-            letsgo_GA.SetFitnessFunction(CalcFitness);
+            //letsgo_GA.SetFitnessFunction(CalcFitness);
 
-            //letsgo_GA.SetFitnessFunction((genome) => 
-            //{
-            //    //Console.WriteLine($"Berechne Fitness für Genom: {string.Join(", ", genome)}");
-            //    double fitness = genome.Sum(); // Beispiel-Berechnung
-            //    //Console.WriteLine($"Fitness: {fitness}");
-            //    return fitness;
-            //});
+            letsgo_GA.SetFitnessFunction((genome) => 
+            {
+                //Console.WriteLine($"Berechne Fitness für Genom: {string.Join(", ", genome)}");
+                double fitness = genome.Sum(); // Beispiel-Berechnung
+                //Console.WriteLine($"Fitness: {fitness}");
+                return fitness;
+            });
 
             //letsgo_GA.SetFitnessFunction(CalcFitness);
             letsgo_GA.InitializePopulation(6);
